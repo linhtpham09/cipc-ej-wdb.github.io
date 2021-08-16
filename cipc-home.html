@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Home-Report</title>
+        <meta charset = "utf-8"> 
+        <meta lang = 'en'> 
+        <link rel = "stylesheet" href = "cipc.css"> 
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+          google.charts.load('current', {'packages':['corechart']});
+          google.charts.setOnLoadCallback(drawChart);
+    
+          function drawChart() {
+    
+            var data = google.visualization.arrayToDataTable([
+              ['Have?', 'Count'],
+              ['No',     22],
+              ['Yes',      23]
+            ]);
+    
+            var options = {
+              title: 'Websites with Translation',
+              backgroundColor: { fill:'transparent' }
+            };
+    
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+    
+            chart.draw(data, options);
+          }
+        </script>
+    </head>
+    <body> 
+        <header> 
+        <!--Navigation bar-->
+            <ul> 
+                
+                <div class = "dropdown"> 
+                <li><a class = "active" href = "cipc-home.html" >Home</a></li>
+                <div class = "dropdown-content"> 
+                <li><a href = "#op1" >What</a></li>
+                <li><a href = "#op2" >How</a></li>
+                <li><a href = "#op3" >Goals</a></li>
+                <li><a href = "#op4" >Web</a></li>
+                <li><a href = "#op5" >Argument</a></li>
+                <li><a href = "#op6" >Outreach</a></li>
+                <li><a href = "#op7" >Quote</a></li>
+                <li><a href = "#op8" >WA</a></li>
+                <li><a href = "#op9" >WA-Argument</a></li>
+                <li><a href = "#op10">End</a></li>
+                </div>
+                </div>
+                <li><a href = "cipc-appendix.html">Appendix</a></li>
+            </ul>
+        </header>
+
+        <section class = 'container'>
+            <!--animated circles Home-->
+            <div> 
+                <span class = "circle" id = 'animate'> </span>
+                <span class = "circle2" id = "ani2"></span>
+                <span class = "circle3" id = "ani3"></span>
+                
+            </div>
+            <h1 style = "margin: 10px 100px 10px 10px; margin-left: 150px; font-size: 45px; " > California Workforce Development Boards <br> An Analysis by the California Immigrant Policy Center </h1>
+            <img src = "images/Open Doodles - Free Time.png" alt = "studying" style = "float: left; display: block; margin: 50px 100px 50px 900px; "> 
+           
+        <!--make more circles and animations-->
+        </section> 
+        
+
+        <!--what-->
+        <section class = 'container'> 
+            <div id = "op1">
+            <h1> What are Workforce Development Boards (WDBs)? </h1>
+            <p> 
+                Workforce Development Boards (WDBs) are business led boards that serve an area. For this area, WDBs are required to 
+                <br> <br> 
+                Identify job market needs and opportunities
+                <br> <br> 
+                Oversee one stop career centers
+                <br> <br> 
+                Provide job training programs 
+                <br> <br> 
+                Promote and develop the local economy 
+
+            </p>
+            </div>
+            </section>
+        <!--How-->
+            <section class = 'container'> 
+                <div id = "op2">
+                    <h1> Methodology </h1>
+                    <p> 
+                        Found and read each board's policies on work authorization and language Access. 
+                        <br> <br> 
+                        Contacted boards whose policies were not available on the website. 
+                        <br> <br> 
+                        Identified struggles and obstacles in community reports and the 2019 summary reports. 
+                        <br> <br> 
+                        Coagulated data into visualization and analyzed.
+                        <br><br> 
+                    </p> 
+                     </div>
+            </section>
+        <!--Goals-->
+        <section class = 'container'> 
+            <div id = "op3">
+                <h1> Workforce Development Boards Right Now </h1>
+                <br><br> 
+                <br><br>
+                <!-- add google data with these columns -->
+                <script type="text/javascript">
+                google.charts.load('current', {packages: ['corechart', 'bar']});
+google.charts.setOnLoadCallback(drawBarColors);
+
+function drawBarColors() {
+      var data = google.visualization.arrayToDataTable([
+        ['Category', 'Median Wage'],
+        ['More Than One Race', 7202],
+        ['White', 7954],
+        ['Native Hawaiian/Pacific Islander', 7494],
+        ['Hispanic/Latino', 6518],
+        ['Black/African American', 6246], 
+        ['Asian', 9620],
+        ['American Indian/Native American', 6453]
+      ]);
+
+      var options = {
+        title: 'Median Wages after WDB Service',
+        backgroundColor: { fill:'transparent' },
+        chartArea: {width: '50%'},
+        colors: ['#b0120a'],
+        hAxis: {
+          title: 'Median Wage',
+          minValue: 0
+        },
+        vAxis: {
+          title: 'Race/Ethnicity'
+        }
+      };
+      var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
+                </script>
+                <div id="chart_div"></div>
+                <br> <br> 
+                <script type = 'text/javascript'>
+                google.charts.load('current', {packages: ['corechart', 'bar']});
+google.charts.setOnLoadCallback(drawBarColors);
+
+function drawBarColors() {
+      var data = google.visualization.arrayToDataTable([
+        ['Category', 'Total Number'],
+        ['More Than One Race', 2674],
+        ['White', 56124],
+        ['Native Hawaiian/Pacific Islander', 1251],
+        ['Hispanic/Latino', 66681],
+        ['Black/African American', 13202], 
+        ['Asian', 15721],
+        ['American Indian/Native American', 2615]
+      ]);
+
+      var options = {
+        title: 'Total Numbers of Participants Served',
+        backgroundColor: { fill:'transparent' },
+        chartArea: {width: '50%'},
+        colors: ['#f8f9fa'],
+        hAxis: {
+          title: 'Numbers',
+          minValue: 0
+        },
+        vAxis: {
+          title: 'Race/Ethnicity'
+        }
+      };
+      var chart = new google.visualization.BarChart(document.getElementById('chart_totalnumber'));
+      chart.draw(data, options);
+    }
+                </script>        
+                <div id = 'chart_totalnumber'></div>             
+                  </div>
+        </section>
+        <!--Web-->
+            <section class = 'container'> 
+                <div id = "op4">
+                    <div id="piechart" style="width: 900px; height: 500px;"></div>
+                </div>
+            </section>
+        <!--Argument-->
+            <section class = 'container'> 
+                <div id = "op5">
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu mauris sapien. Vestibulum quis libero vehicula, hendrerit sem sit amet, bibendum diam. Nunc felis lorem, aliquet congue erat eu, consequat dignissim arcu. Phasellus pharetra ut augue id pharetra. Nunc vel purus dignissim, pharetra ipsum at, aliquam purus. Nulla vitae est maximus, vehicula lacus fermentum, venenatis nibh. Fusce tincidunt, urna in luctus gravida, ipsum lacus porttitor odio, non convallis odio magna at lectus. Vestibulum sagittis varius dictum. In tempor tellus nec massa blandit, sed molestie ex finibus. Ut varius vestibulum metus at elementum.
+                        <br> <br> 
+                        Nam non condimentum ex. Vivamus eget pretium diam. Mauris molestie mauris sollicitudin magna ornare, at lacinia dolor maximus. Suspendisse ac orci laoreet, dictum ligula et, tincidunt elit. Mauris fringilla pulvinar pretium. Sed pulvinar dolor sit amet odio ultricies volutpat. Nunc arcu libero, tristique a lectus sit amet, porta pretium neque. Pellentesque quis mauris in nulla aliquet accumsan vel sed risus. Morbi mollis fringilla arcu at blandit. Phasellus elementum odio vel nibh dignissim, eget mollis velit scelerisque. Praesent faucibus vitae purus vitae hendrerit. Suspendisse eget quam erat. Phasellus porttitor malesuada dapibus. Duis purus turpis, tempor feugiat dignissim eu, varius ac erat.
+                        <br> <br> 
+                        Quisque consectetur sollicitudin leo, non varius sapien rutrum non. Curabitur bibendum dapibus sapien eget sodales. Pellentesque nec ex maximus, pharetra nisl non, finibus mauris. Vestibulum ac est a purus eleifend sodales. Suspendisse ac mi augue. Nunc tincidunt maximus metus, a vulputate lorem placerat vel. Donec dictum urna non tellus mollis, a aliquet lacus blandit. Nulla nec elit a felis egestas hendrerit. Curabitur vestibulum, augue ut tempus elementum, erat tellus commodo enim, nec volutpat turpis dolor nec nibh. Vestibulum vehicula fringilla metus, sed convallis quam dapibus et. Fusce ullamcorper accumsan porta. Morbi posuere viverra pellentesque. Aliquam dapibus auctor enim vel iaculis. Nunc facilisis a arcu ultrices aliquam.</p>
+                </div>
+            </section>
+        <!--Oureach-->
+            <section class = 'container'> 
+                <div id = "op6">
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu mauris sapien. Vestibulum quis libero vehicula, hendrerit sem sit amet, bibendum diam. Nunc felis lorem, aliquet congue erat eu, consequat dignissim arcu. Phasellus pharetra ut augue id pharetra. Nunc vel purus dignissim, pharetra ipsum at, aliquam purus. Nulla vitae est maximus, vehicula lacus fermentum, venenatis nibh. Fusce tincidunt, urna in luctus gravida, ipsum lacus porttitor odio, non convallis odio magna at lectus. Vestibulum sagittis varius dictum. In tempor tellus nec massa blandit, sed molestie ex finibus. Ut varius vestibulum metus at elementum.
+                        <br> <br> 
+                        Nam non condimentum ex. Vivamus eget pretium diam. Mauris molestie mauris sollicitudin magna ornare, at lacinia dolor maximus. Suspendisse ac orci laoreet, dictum ligula et, tincidunt elit. Mauris fringilla pulvinar pretium. Sed pulvinar dolor sit amet odio ultricies volutpat. Nunc arcu libero, tristique a lectus sit amet, porta pretium neque. Pellentesque quis mauris in nulla aliquet accumsan vel sed risus. Morbi mollis fringilla arcu at blandit. Phasellus elementum odio vel nibh dignissim, eget mollis velit scelerisque. Praesent faucibus vitae purus vitae hendrerit. Suspendisse eget quam erat. Phasellus porttitor malesuada dapibus. Duis purus turpis, tempor feugiat dignissim eu, varius ac erat.
+                        <br> <br> 
+                        Quisque consectetur sollicitudin leo, non varius sapien rutrum non. Curabitur bibendum dapibus sapien eget sodales. Pellentesque nec ex maximus, pharetra nisl non, finibus mauris. Vestibulum ac est a purus eleifend sodales. Suspendisse ac mi augue. Nunc tincidunt maximus metus, a vulputate lorem placerat vel. Donec dictum urna non tellus mollis, a aliquet lacus blandit. Nulla nec elit a felis egestas hendrerit. Curabitur vestibulum, augue ut tempus elementum, erat tellus commodo enim, nec volutpat turpis dolor nec nibh. Vestibulum vehicula fringilla metus, sed convallis quam dapibus et. Fusce ullamcorper accumsan porta. Morbi posuere viverra pellentesque. Aliquam dapibus auctor enim vel iaculis. Nunc facilisis a arcu ultrices aliquam.</p>
+                </div>
+            </section>
+        <!--Quote-->
+            <section class = 'container'> 
+                <div id = "op7">
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu mauris sapien. Vestibulum quis libero vehicula, hendrerit sem sit amet, bibendum diam. Nunc felis lorem, aliquet congue erat eu, consequat dignissim arcu. Phasellus pharetra ut augue id pharetra. Nunc vel purus dignissim, pharetra ipsum at, aliquam purus. Nulla vitae est maximus, vehicula lacus fermentum, venenatis nibh. Fusce tincidunt, urna in luctus gravida, ipsum lacus porttitor odio, non convallis odio magna at lectus. Vestibulum sagittis varius dictum. In tempor tellus nec massa blandit, sed molestie ex finibus. Ut varius vestibulum metus at elementum.
+                        <br> <br> 
+                        Nam non condimentum ex. Vivamus eget pretium diam. Mauris molestie mauris sollicitudin magna ornare, at lacinia dolor maximus. Suspendisse ac orci laoreet, dictum ligula et, tincidunt elit. Mauris fringilla pulvinar pretium. Sed pulvinar dolor sit amet odio ultricies volutpat. Nunc arcu libero, tristique a lectus sit amet, porta pretium neque. Pellentesque quis mauris in nulla aliquet accumsan vel sed risus. Morbi mollis fringilla arcu at blandit. Phasellus elementum odio vel nibh dignissim, eget mollis velit scelerisque. Praesent faucibus vitae purus vitae hendrerit. Suspendisse eget quam erat. Phasellus porttitor malesuada dapibus. Duis purus turpis, tempor feugiat dignissim eu, varius ac erat.
+                        <br> <br> 
+                        Quisque consectetur sollicitudin leo, non varius sapien rutrum non. Curabitur bibendum dapibus sapien eget sodales. Pellentesque nec ex maximus, pharetra nisl non, finibus mauris. Vestibulum ac est a purus eleifend sodales. Suspendisse ac mi augue. Nunc tincidunt maximus metus, a vulputate lorem placerat vel. Donec dictum urna non tellus mollis, a aliquet lacus blandit. Nulla nec elit a felis egestas hendrerit. Curabitur vestibulum, augue ut tempus elementum, erat tellus commodo enim, nec volutpat turpis dolor nec nibh. Vestibulum vehicula fringilla metus, sed convallis quam dapibus et. Fusce ullamcorper accumsan porta. Morbi posuere viverra pellentesque. Aliquam dapibus auctor enim vel iaculis. Nunc facilisis a arcu ultrices aliquam.</p>
+                </div>
+                </section>
+        <!--WA -->
+            <section class = 'container'> 
+                <div id = "op8">
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu mauris sapien. Vestibulum quis libero vehicula, hendrerit sem sit amet, bibendum diam. Nunc felis lorem, aliquet congue erat eu, consequat dignissim arcu. Phasellus pharetra ut augue id pharetra. Nunc vel purus dignissim, pharetra ipsum at, aliquam purus. Nulla vitae est maximus, vehicula lacus fermentum, venenatis nibh. Fusce tincidunt, urna in luctus gravida, ipsum lacus porttitor odio, non convallis odio magna at lectus. Vestibulum sagittis varius dictum. In tempor tellus nec massa blandit, sed molestie ex finibus. Ut varius vestibulum metus at elementum.
+                        <br> <br> 
+                        Nam non condimentum ex. Vivamus eget pretium diam. Mauris molestie mauris sollicitudin magna ornare, at lacinia dolor maximus. Suspendisse ac orci laoreet, dictum ligula et, tincidunt elit. Mauris fringilla pulvinar pretium. Sed pulvinar dolor sit amet odio ultricies volutpat. Nunc arcu libero, tristique a lectus sit amet, porta pretium neque. Pellentesque quis mauris in nulla aliquet accumsan vel sed risus. Morbi mollis fringilla arcu at blandit. Phasellus elementum odio vel nibh dignissim, eget mollis velit scelerisque. Praesent faucibus vitae purus vitae hendrerit. Suspendisse eget quam erat. Phasellus porttitor malesuada dapibus. Duis purus turpis, tempor feugiat dignissim eu, varius ac erat.
+                        <br> <br> 
+                        Quisque consectetur sollicitudin leo, non varius sapien rutrum non. Curabitur bibendum dapibus sapien eget sodales. Pellentesque nec ex maximus, pharetra nisl non, finibus mauris. Vestibulum ac est a purus eleifend sodales. Suspendisse ac mi augue. Nunc tincidunt maximus metus, a vulputate lorem placerat vel. Donec dictum urna non tellus mollis, a aliquet lacus blandit. Nulla nec elit a felis egestas hendrerit. Curabitur vestibulum, augue ut tempus elementum, erat tellus commodo enim, nec volutpat turpis dolor nec nibh. Vestibulum vehicula fringilla metus, sed convallis quam dapibus et. Fusce ullamcorper accumsan porta. Morbi posuere viverra pellentesque. Aliquam dapibus auctor enim vel iaculis. Nunc facilisis a arcu ultrices aliquam.</p>
+                </div>
+            </section>
+        <!--Wa-argument-->
+            <section class = 'container'> 
+                <div id = "op9">
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu mauris sapien. Vestibulum quis libero vehicula, hendrerit sem sit amet, bibendum diam. Nunc felis lorem, aliquet congue erat eu, consequat dignissim arcu. Phasellus pharetra ut augue id pharetra. Nunc vel purus dignissim, pharetra ipsum at, aliquam purus. Nulla vitae est maximus, vehicula lacus fermentum, venenatis nibh. Fusce tincidunt, urna in luctus gravida, ipsum lacus porttitor odio, non convallis odio magna at lectus. Vestibulum sagittis varius dictum. In tempor tellus nec massa blandit, sed molestie ex finibus. Ut varius vestibulum metus at elementum.
+                        <br> <br> 
+                        Nam non condimentum ex. Vivamus eget pretium diam. Mauris molestie mauris sollicitudin magna ornare, at lacinia dolor maximus. Suspendisse ac orci laoreet, dictum ligula et, tincidunt elit. Mauris fringilla pulvinar pretium. Sed pulvinar dolor sit amet odio ultricies volutpat. Nunc arcu libero, tristique a lectus sit amet, porta pretium neque. Pellentesque quis mauris in nulla aliquet accumsan vel sed risus. Morbi mollis fringilla arcu at blandit. Phasellus elementum odio vel nibh dignissim, eget mollis velit scelerisque. Praesent faucibus vitae purus vitae hendrerit. Suspendisse eget quam erat. Phasellus porttitor malesuada dapibus. Duis purus turpis, tempor feugiat dignissim eu, varius ac erat.
+                        <br> <br> 
+                        Quisque consectetur sollicitudin leo, non varius sapien rutrum non. Curabitur bibendum dapibus sapien eget sodales. Pellentesque nec ex maximus, pharetra nisl non, finibus mauris. Vestibulum ac est a purus eleifend sodales. Suspendisse ac mi augue. Nunc tincidunt maximus metus, a vulputate lorem placerat vel. Donec dictum urna non tellus mollis, a aliquet lacus blandit. Nulla nec elit a felis egestas hendrerit. Curabitur vestibulum, augue ut tempus elementum, erat tellus commodo enim, nec volutpat turpis dolor nec nibh. Vestibulum vehicula fringilla metus, sed convallis quam dapibus et. Fusce ullamcorper accumsan porta. Morbi posuere viverra pellentesque. Aliquam dapibus auctor enim vel iaculis. Nunc facilisis a arcu ultrices aliquam.</p>
+                </div>
+            </section>
+        <!-- THE END -->
+            <section class = "container" >
+                <!--animated circles-->
+                <div id = 'op10' > 
+                <span class = "circle"id = 'animate'> </span>        
+                <span class = "circle2"id = "ani2"></span> 
+                <h1 style = "font-size: 100px; "> An Economy<br> For All  </h1>
+                </div>
+                <!--make more circles and animations-->
+            </section> 
+
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="cipc.js"></script>
+        
+    </body>
+</html>
