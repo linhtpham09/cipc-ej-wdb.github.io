@@ -4,31 +4,10 @@
         <title> Appendix </title>
         <meta charset = "utf-8"> 
         <meta lang = 'en'> 
-        <link rel = "stylesheet" href = "style.css"> 
+        <link rel = "stylesheet" href = "cipc.css"> 
         
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script type="text/javascript">
-          google.charts.load('current', {'packages':['corechart']});
-          google.charts.setOnLoadCallback(drawChart);
-    
-          function drawChart() {
-    
-            var data = google.visualization.arrayToDataTable([
-              ['Have?', 'Count'],
-              ['No', 22],
-              ['Yes', 23]
-            ]);
-    
-            var options = {
-              title: 'Websites with Translation',
-              backgroundColor: { fill:'transparent' }
-            };
-    
-            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-    
-            chart.draw(data, options);
-          }
-        </script>
+
           
 </head>
 
@@ -44,16 +23,46 @@
     </header>
     <section class = "text">
         <h1> Data Appendix </h1>
-        <p> To see the interactive charts click here: 
+        <p> To see the all data click here: 
+            <br> <br> 
             <a href = "https://github.com/linhtpham09/cipc"> https://github.com/linhtpham09/cipc</a>
+            <br> <br> 
+             - wdb_all.xlsx will have all data from the 2019 Workforce Innovation and Opportunity Act Annual Report 
+             <br> <br> 
+             - WDB status.xlsx will have all the WDBs I asked for information from 
+             <br> <br> 
+             - files folder will have all the documents I used in my research.
+            The documents folder within the files folder has all of the collected policies. 
         </p>
         <br> <br> 
-        <h1> For the complete report </h1>
+        <a href = "https://documentcloud.adobe.com/link/review?uri=urn:aaid:scds:US:3beda429-1549-4858-a635-0017460d9506"> Written Summary and Report by Linh Pham </a> 
+        <br> <br>
+        <a href = "https://cwdb.ca.gov/wp-content/uploads/sites/43/2020/12/PY-2019-WIOA-AnnualReport_ACCESSIBLE.pdf">  The 2019 Workforce Innovation and Opportunity Act Annual Report </a>
         <br> <br> 
-        <h1> Other citations</h1>
         <a href = "https://drive.google.com/file/d/1xDWI26k2sqMGCCrWwQ2ikLceZ4T7eECa/view?usp=sharing">EDD Work Authorization Final Guidelines</a> 
     </section>
-
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+  
+        function drawChart() {
+  
+          var data = google.visualization.arrayToDataTable([
+            ['Have?', 'Count'],
+            ['No', 22],
+            ['Yes', 23]
+          ]);
+  
+          var options = {
+            title: 'Websites with Translation',
+            backgroundColor: { fill:'transparent' }
+          };
+  
+          var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  
+          chart.draw(data, options);
+        }
+      </script>
     <div id="piechart" style="width: 900px; height: 500px; align-content: center;"></div>
     <div class = 'row'> 
         <div class = 'column'> 
@@ -116,12 +125,15 @@
                 
             </p></ul> 
         </div>
-    </div>
+        <h1> Map </h1>
+        <style>
+        .embed-container {position: relative; padding-bottom: 80%; height: 0; max-width: 100%;} 
+        .embed-container iframe, .embed-container object, 
+        .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;} 
+        small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style>
+       <div class="embed-container"><iframe width="200" height="100" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="ca_undoc" src="https://arcg.is/0P1fDm0"></iframe></div>
+    
 
-    <style>
-    .embed-container {position: relative; padding-bottom: 80%; height: 0; max-width: 100%;} 
-    .embed-container iframe, .embed-container object, 
-    .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;} 
-    small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style>
-   <div class="embed-container"><iframe width="200" height="100" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="ca_undoc" src="https://arcg.is/0P1fDm0"></iframe></div>
+
+    </div>
 </body>
